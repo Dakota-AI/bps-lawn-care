@@ -1,49 +1,30 @@
-const reveals = document.querySelectorAll('.reveal');
-const cards = document.querySelectorAll('.tilt');
-const yearNode = document.getElementById('year');
+const year = document.getElementById('year');
+if (year) year.textContent = String(new Date().getFullYear());
 
-if (yearNode) {
-  yearNode.textContent = new Date().getFullYear();
-}
-
+const cards = document.querySelectorAll('.listing-card');
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver(
+  const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          io.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.15 }
   );
 
-  reveals.forEach((node) => observer.observe(node));
-
-  cards.forEach((card) => {
-    card.addEventListener('pointermove', (event) => {
-      const box = card.getBoundingClientRect();
-      const x = event.clientX - box.left;
-      const y = event.clientY - box.top;
-      const tiltX = ((y / box.height) - 0.5) * -8;
-      const tiltY = ((x / box.width) - 0.5) * 8;
-      card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-    });
-
-    card.addEventListener('pointerleave', () => {
-      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    });
-  });
+  cards.forEach((card) => io.observe(card));
 } else {
-  reveals.forEach((node) => node.classList.add('show'));
+  cards.forEach((card) => card.classList.add('show'));
 }
 
-document.querySelector('.quote-form')?.addEventListener('submit', (event) => {
+document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
   event.preventDefault();
-  const button = event.currentTarget.querySelector('button[type="submit"]');
+  const button = event.currentTarget.querySelector('button');
   if (button) {
-    button.textContent = 'Quote Requested';
+    button.textContent = 'Sent';
     button.disabled = true;
   }
 });

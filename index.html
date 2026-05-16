@@ -5,105 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BP's Lawn Care - premium mowing, edging, and outdoor cleanup with modern booking experience."
+      content="BP's Lawn Care - where clean lawns become standout homes."
     />
     <title>BP's Lawn Care</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-grid" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="brand" href="#">BP's Lawn Care</a>
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn btn-sm" href="#contact">Book Now</a>
+      <div class="container nav-wrap">
+        <a class="brand" href="#top">BP's Lawn Care</a>
+        <nav class="nav">
+          <a href="#services">Services</a>
+          <a href="#properties">Results</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section class="hero section reveal" id="top">
-        <p class="eyebrow">Serving Local Neighborhoods</p>
-        <h1>Sharp Lawns. Clean Edges. Zero Hassle.</h1>
-        <p class="lead">
-          A modern lawn service experience with reliable crews, simple scheduling, and before/after quality you can trust.
+    <main id="top">
+      <section class="hero container">
+        <p class="kicker">Local. Reliable. Detailed.</p>
+        <h1>Where rough yards become clean curb appeal.</h1>
+        <a class="cta" href="#contact">Find your lawn plan now</a>
+      </section>
+
+      <section class="mission container">
+        <h2>Our Mission</h2>
+        <p>
+          At BP's Lawn Care, our mission is simple: make every property feel cared for. We combine dependable crews,
+          straightforward communication, and quality-focused service to create outdoor spaces people are proud to come home to.
         </p>
-        <div class="hero-cta">
-          <a class="btn" href="#contact">Get Free Quote</a>
-          <a class="btn btn-ghost" href="#work">See Results</a>
-        </div>
-        <ul class="stats" aria-label="Company highlights">
-          <li><strong>200+</strong><span>Lawns Maintained</span></li>
-          <li><strong>4.9/5</strong><span>Average Rating</span></li>
-          <li><strong>24h</strong><span>Quote Turnaround</span></li>
-        </ul>
       </section>
 
-      <section class="section cards reveal" id="services">
-        <div class="section-head">
-          <p class="eyebrow">What We Do</p>
-          <h2>Modern service, old-school reliability.</h2>
-        </div>
-        <div class="card-grid">
-          <article class="card tilt">
-            <h3>Routine Lawn Care</h3>
-            <p>Weekly or bi-weekly mowing, edging, trimming, and clean blow-off with consistent quality.</p>
+      <section class="listings container" id="properties">
+        <h2>Available service packages. Click card to view details.</h2>
+        <div class="listing-grid">
+          <article class="listing-card reveal">
+            <div class="media media-1" aria-hidden="true"></div>
+            <div class="content">
+              <h3>Weekly Standard</h3>
+              <p>Includes mowing, edging, trimming, and cleanup.</p>
+              <ul>
+                <li>Up to 1/4 acre</li>
+                <li>48-hour scheduling</li>
+                <li>Starts at $55/visit</li>
+              </ul>
+            </div>
           </article>
-          <article class="card tilt">
-            <h3>Seasonal Cleanup</h3>
-            <p>Leaf removal, overgrowth reset, and curb-ready cleanup before events or property listings.</p>
+
+          <article class="listing-card reveal">
+            <div class="media media-2" aria-hidden="true"></div>
+            <div class="content">
+              <h3>Bi-Weekly Plus</h3>
+              <p>Great for lower-growth seasons and budget control.</p>
+              <ul>
+                <li>Up to 1/3 acre</li>
+                <li>Text reminders</li>
+                <li>Starts at $70/visit</li>
+              </ul>
+            </div>
           </article>
-          <article class="card tilt">
-            <h3>Landscape Detailing</h3>
-            <p>Mulch refresh, bed shaping, hedge trimming, and visual polish that upgrades curb appeal fast.</p>
+
+          <article class="listing-card reveal">
+            <div class="media media-3" aria-hidden="true"></div>
+            <div class="content">
+              <h3>Cleanup + Reset</h3>
+              <p>One-time overgrowth cleanup and curb-appeal reset.</p>
+              <ul>
+                <li>Custom quote</li>
+                <li>Debris haul-off option</li>
+                <li>Before/after photos</li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="section work reveal" id="work">
-        <div class="section-head">
-          <p class="eyebrow">Recent Results</p>
-          <h2>Proof in every pass.</h2>
-        </div>
-        <div class="work-grid">
-          <div class="work-item"><span>Before</span></div>
-          <div class="work-item"><span>After</span></div>
-          <div class="work-item"><span>Edge Detail</span></div>
-          <div class="work-item"><span>Cleanup Finish</span></div>
+      <section class="services container" id="services">
+        <h2>What we handle</h2>
+        <div class="service-tags">
+          <span>Mowing</span>
+          <span>Edging</span>
+          <span>Hedge Trimming</span>
+          <span>Mulch Refresh</span>
+          <span>Leaf Cleanup</span>
+          <span>Yard Reset</span>
         </div>
       </section>
 
-      <section class="section contact reveal" id="contact">
-        <div class="section-head">
-          <p class="eyebrow">Get Started</p>
-          <h2>Tell us about your yard.</h2>
-        </div>
-        <form class="quote-form" aria-label="Request a quote">
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label>
-            Service Address
-            <input type="text" name="address" autocomplete="street-address" required />
-          </label>
-          <label>
-            Notes
-            <textarea name="notes" rows="4" placeholder="What services do you need?"></textarea>
-          </label>
-          <button class="btn" type="submit">Request Quote</button>
+      <section class="contact container" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you do not see the exact service you need, reach out and we will build a custom lawn plan.</p>
+        <form class="contact-form" aria-label="Contact form">
+          <label for="name">Name*</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+
+          <label for="email">Email*</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your property"></textarea>
+
+          <button type="submit">Send</button>
         </form>
+
+        <div class="contact-info">
+          <h3>BP's Lawn Care</h3>
+          <p>hello@bpslawncare.com</p>
+        </div>
       </section>
     </main>
 
