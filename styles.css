@@ -394,11 +394,11 @@ h1 {
 }
 
 .layer.before {
-  background: url('assets/before-yard.svg') center / cover no-repeat;
+  background: url('assets/before-yard-photo.jpg') center / cover no-repeat;
 }
 
 .layer.after {
-  background: url('assets/after-yard.svg') center / cover no-repeat;
+  background: url('assets/after-yard-photo.jpg') center / cover no-repeat;
   clip-path: inset(0 45% 0 0);
 }
 

@@ -3,10 +3,10 @@ if (yearNode) yearNode.textContent = String(new Date().getFullYear());
 
 const business = {
   name: "BP's Lawn Care",
-  phone: '+15125551234',
-  displayPhone: '(512) 555-1234',
-  email: 'hello@bpslawncare.com',
-  serviceArea: 'Greater Austin area',
+  phone: '+13182330383',
+  displayPhone: '(318) 233-0383',
+  email: 'brody.paul927@yahoo.com',
+  serviceArea: 'Alexandria, Louisiana area',
   hours: 'Mon-Fri, 8am-6pm',
 };
 
@@ -277,7 +277,21 @@ if (contactForm) {
         contactForm.reset();
       })
       .catch(() => {
-        complete('We could not send this request. Please try again or contact us by phone.', true);
+        openMailto(
+          `${business.name} quote request from ${fullName}`,
+          [
+            'Hello Brody,',
+            '',
+            `Name: ${fullName}`,
+            `Email: ${emailAddress}`,
+            `Phone: ${phoneNumber || 'not provided'}`,
+            `Service address: ${serviceAddress}`,
+            `Project notes: ${projectNotes || 'none'}`,
+            '',
+            'Please reply with the next step.',
+          ].join('\n')
+        );
+        complete('Automatic email is not configured yet, so we opened a prefilled email draft to Brody.', true);
       });
   });
 }

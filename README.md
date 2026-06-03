@@ -8,18 +8,18 @@ The contact form works in static-hosting mode:
 
 - The live form is configured to POST to `/api/lead`.
 - `/api/lead` sends Brody a lead notification email through Resend.
-- If `data-contact-endpoint` on `<body>` is empty, the form opens a prefilled email to `hello@bpslawncare.com`.
+- If `data-contact-endpoint` on `<body>` is empty, the form opens a prefilled email to `brody.paul927@yahoo.com`.
 - Local lead storage is disabled by default because lead forms collect personally identifiable information. For development-only smoke testing, set `data-local-lead-storage="true"` on `<body>`.
 
 Required production environment variables:
 
 ```txt
 RESEND_API_KEY=...
-LEAD_EMAIL_TO=brody@example.com
+LEAD_EMAIL_TO=brody.paul927@yahoo.com
 LEAD_EMAIL_FROM=BP's Lawn Care <leads@your-verified-domain.com>
 ```
 
-Before launch, replace the placeholder phone/email and set Brody's real email in `LEAD_EMAIL_TO`. `LEAD_EMAIL_FROM` must use a sender domain verified in Resend.
+Before launch, set `RESEND_API_KEY` and use a `LEAD_EMAIL_FROM` sender domain verified in Resend.
 
 ## Security Notes
 
