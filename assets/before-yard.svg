@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Overgrown lawn before service</title>
+  <desc id="desc">A front yard with uneven overgrown grass, weeds, and leaves before cleanup.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#b9d1c2"/>
+      <stop offset="1" stop-color="#ead7b3"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" fill="url(#bg)"/>
+  <rect y="285" width="960" height="235" fill="#62713d"/>
+  <g stroke="#35471d" stroke-linecap="round" opacity=".75">
+    <path d="M45 515 L72 372" stroke-width="18"/>
+    <path d="M105 520 L134 340" stroke-width="21"/>
+    <path d="M168 518 L190 358" stroke-width="16"/>
+    <path d="M246 520 L277 332" stroke-width="25"/>
+    <path d="M314 516 L331 386" stroke-width="14"/>
+    <path d="M382 520 L425 322" stroke-width="24"/>
+    <path d="M506 520 L544 350" stroke-width="20"/>
+    <path d="M612 520 L650 335" stroke-width="25"/>
+    <path d="M712 520 L734 371" stroke-width="17"/>
+    <path d="M812 520 L852 331" stroke-width="24"/>
+    <path d="M910 520 L932 383" stroke-width="17"/>
+  </g>
+  <g fill="#806f43" opacity=".85">
+    <ellipse cx="158" cy="454" rx="42" ry="16" transform="rotate(-14 158 454)"/>
+    <ellipse cx="348" cy="426" rx="34" ry="14" transform="rotate(21 348 426)"/>
+    <ellipse cx="744" cy="458" rx="48" ry="17" transform="rotate(-9 744 458)"/>
+  </g>
+  <path d="M0 238 C220 206 348 234 508 210 C694 182 780 202 960 174 L960 286 L0 286 Z" fill="#e8e1cb"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Clean lawn after service</title>
+  <desc id="desc">A finished lawn with clean stripes, trimmed edges, and cleared walkway after service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d9eef2"/>
+      <stop offset="1" stop-color="#f4dfb4"/>
+    </linearGradient>
+    <pattern id="mow" width="94" height="94" patternUnits="userSpaceOnUse" patternTransform="rotate(14)">
+      <rect width="47" height="94" fill="#3f8a4b"/>
+      <rect x="47" width="47" height="94" fill="#2e7341"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="520" fill="url(#bg)"/>
+  <rect y="275" width="960" height="245" fill="url(#mow)"/>
+  <path d="M0 270 C220 242 348 260 508 232 C694 202 780 218 960 188 L960 292 L0 292 Z" fill="#eee6d2"/>
+  <path d="M0 286 C226 259 348 278 510 250 C699 217 789 238 960 209" fill="none" stroke="#d6cab0" stroke-width="12" opacity=".9"/>
+  <g fill="#2e6440">
+    <ellipse cx="116" cy="278" rx="74" ry="32"/>
+    <ellipse cx="238" cy="282" rx="92" ry="36"/>
+    <ellipse cx="752" cy="264" rx="96" ry="35"/>
+    <ellipse cx="866" cy="270" rx="74" ry="31"/>
+  </g>
+  <g stroke="#f3f5d3" stroke-width="4" opacity=".32">
+    <path d="M58 520 L442 275"/>
+    <path d="M196 520 L570 275"/>
+    <path d="M336 520 L702 275"/>
+    <path d="M476 520 L830 275"/>
+  </g>
+</svg>

@@ -5,131 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BP's Lawn Care - premium lawn maintenance with modern scheduling and elite curb appeal results."
+      content="BP's Lawn Care provides weekly mowing, cleanup, and curb appeal refresh services with fast quotes and dependable scheduling."
     />
-    <title>BP's Lawn Care | Elite Curb Appeal</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; img-src 'self' data:; font-src https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>BP's Lawn Care | Premium Lawn Service</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Bricolage+Grotesque:wght@500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="noise" aria-hidden="true"></div>
+  <body data-contact-endpoint="/api/lead" data-local-lead-storage="false">
+    <div class="mesh" aria-hidden="true"></div>
+
     <header class="site-header">
-      <div class="container nav-shell">
-        <a class="brand" href="#top">BP's Lawn Care</a>
-        <nav class="nav">
+      <div class="nav-shell container">
+        <a class="brand" href="#top"><span class="brand-mark"></span>BP's Lawn Care</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="nav" id="site-nav">
           <a href="#services">Services</a>
-          <a href="#process">Process</a>
           <a href="#results">Results</a>
+          <a href="#quote-tool">Quote Tool</a>
+          <a href="#availability">Availability</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="btn btn-small" href="#contact">Book Now</a>
+        <a class="btn btn-pill" href="#contact">Get Free Quote</a>
       </div>
     </header>
 
     <main id="top">
       <section class="hero container reveal">
-        <p class="eyebrow">Premium Lawn Management</p>
-        <h1>Your Yard Should Look Like The Best House On The Block.</h1>
-        <p>
-          BP's Lawn Care combines dependable crews, clean execution, and modern communication to keep your property
-          sharp every week.
-        </p>
-        <div class="hero-cta">
-          <a class="btn" href="#contact">Get My Quote</a>
-          <a class="btn btn-ghost" href="#results">View Before + After</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Austin route crews</p>
+          <h1>Clean lines, tight edges, and lawns that look handled.</h1>
+          <p class="lede">
+            Weekly mowing, cleanups, and curb appeal resets for homeowners who want predictable service and a yard
+            that looks right from the street.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#quote-tool">Estimate My Price</a>
+            <a class="btn btn-ghost" href="tel:+15125551234">Call (512) 555-1234</a>
+          </div>
+          <div class="hero-chips">
+            <span>Licensed and insured</span>
+            <span>Residential and small commercial routes</span>
+            <span>Weekly + seasonal plans</span>
+          </div>
         </div>
-        <ul class="kpis">
-          <li><strong>4.9★</strong><span>Avg rating</span></li>
-          <li><strong>24h</strong><span>Quote turnaround</span></li>
-          <li><strong>200+</strong><span>Yards transformed</span></li>
-        </ul>
+
+        <figure class="hero-visual tilt">
+          <img src="assets/hero-lawn.svg" alt="Freshly mowed front lawn with clean stripes and trimmed edges" />
+          <figcaption>
+            <span>Typical visit</span>
+            Mow, trim, edge, and blow-off before the crew leaves.
+          </figcaption>
+        </figure>
       </section>
 
-      <section id="services" class="services container reveal">
+      <section id="services" class="container section reveal">
         <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2>High-impact maintenance plans.</h2>
+          <p class="eyebrow">Core Services</p>
+          <h2>Lawn care options built around consistency.</h2>
         </div>
-        <div class="service-grid">
-          <article class="service-card tilt">
-            <h3>Weekly Signature</h3>
-            <p>Mow, edge, trim, and final cleanup for a consistently polished look.</p>
+        <div class="cards three service-cards">
+          <article class="card tilt">
+            <span class="service-icon mower-icon" aria-hidden="true"></span>
+            <h3>Weekly Mowing + Edging</h3>
+            <p>Routine mowing, line trimming, edge cleanup, and blow-off every visit.</p>
           </article>
-          <article class="service-card tilt">
-            <h3>Property Reset</h3>
-            <p>Overgrowth removal, re-shaping, and cleanup for neglected or seasonal yards.</p>
+          <article class="card tilt">
+            <span class="service-icon cleanup-icon" aria-hidden="true"></span>
+            <h3>Overgrowth Cleanup</h3>
+            <p>One-time reset for overgrown properties and neglected lawn boundaries.</p>
           </article>
-          <article class="service-card tilt">
-            <h3>Curb Appeal Detail</h3>
-            <p>Hedge lines, mulch refresh, bed definition, and visual finishing touches.</p>
+          <article class="card tilt">
+            <span class="service-icon curb-icon" aria-hidden="true"></span>
+            <h3>Curb Appeal Refresh</h3>
+            <p>Front-yard detail package with trim shaping, cleanup, and visual polish.</p>
           </article>
         </div>
-      </section>
-
-      <section id="process" class="process container reveal">
-        <div class="section-head">
-          <p class="eyebrow">Process</p>
-          <h2>Simple from quote to finish.</h2>
-        </div>
-        <ol>
-          <li><strong>Request</strong><span>Tell us about your property and goals.</span></li>
-          <li><strong>Walkthrough</strong><span>We evaluate the lawn and recommend the right plan.</span></li>
-          <li><strong>Execution</strong><span>We show up on schedule and complete clean, detailed work.</span></li>
-          <li><strong>Maintenance</strong><span>We keep it sharp with recurring service and updates.</span></li>
-        </ol>
-      </section>
-
-      <section id="results" class="results container reveal">
-        <div class="section-head">
-          <p class="eyebrow">Results</p>
-          <h2>Work that sells itself.</h2>
-        </div>
-        <div class="result-grid">
-          <article class="result-card">
-            <div class="result-media green-a" aria-hidden="true"></div>
-            <h3>Overgrown to clean lines</h3>
+        <div class="highlight-strip">
+          <article class="highlight-card">
+            <p class="meta">Service Area</p>
+            <h3>North, Central, and South Austin routes</h3>
+            <p>Built for tight route density so recurring customers get reliable day windows and consistent crews.</p>
           </article>
-          <article class="result-card">
-            <div class="result-media green-b" aria-hidden="true"></div>
-            <h3>Patchy to uniform finish</h3>
-          </article>
-          <article class="result-card">
-            <div class="result-media green-c" aria-hidden="true"></div>
-            <h3>Messy beds to polished curb</h3>
+          <article class="highlight-card">
+            <p class="meta">Turnaround</p>
+            <h3>Fast quote response and clear scheduling</h3>
+            <p>Requests are structured to produce same-day or next-business-day follow-up once the backend is connected.</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="contact container reveal">
+      <section id="results" class="container section reveal">
         <div class="section-head">
-          <p class="eyebrow">Book Today</p>
-          <h2>Get your custom lawn plan.</h2>
+          <p class="eyebrow">Before / After</p>
+          <h2>Drag to compare a cleanup result.</h2>
         </div>
-        <form class="contact-form" aria-label="Get Quote Form">
-          <label for="name">Name</label>
-          <input id="name" name="name" required autocomplete="name" />
+        <div class="compare-card">
+          <div class="compare-frame" id="compareFrame">
+            <div class="layer before"></div>
+            <div class="layer after" id="afterLayer"></div>
+            <input id="compareRange" class="compare-range" type="range" min="0" max="100" value="55" aria-label="Compare before and after" />
+            <div class="compare-labels"><span>Before</span><span>After</span></div>
+          </div>
+        </div>
+      </section>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required autocomplete="email" />
+      <section id="quote-tool" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Live Feature</p>
+          <h2>Instant lawn service estimator.</h2>
+        </div>
+        <div class="feature-grid">
+          <form class="card quote-tool" id="quoteTool">
+            <label for="size">Yard size</label>
+            <select id="size" name="size">
+              <option value="small">Small (&lt; 5,000 sq ft)</option>
+              <option value="medium" selected>Medium (5,000 - 10,000 sq ft)</option>
+              <option value="large">Large (10,000+ sq ft)</option>
+            </select>
 
-          <label for="address">Service Address</label>
-          <input id="address" name="address" required autocomplete="street-address" />
+            <label for="frequency">Service frequency</label>
+            <select id="frequency" name="frequency">
+              <option value="weekly" selected>Weekly</option>
+              <option value="biweekly">Bi-weekly</option>
+              <option value="onetime">One-time cleanup</option>
+            </select>
 
-          <label for="message">Project Notes</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us about your yard"></textarea>
+            <label><input type="checkbox" name="addons" value="edging" checked /> Premium edging</label>
+            <label><input type="checkbox" name="addons" value="debris" /> Debris haul-away</label>
+            <label><input type="checkbox" name="addons" value="beds" /> Flower bed cleanup</label>
+          </form>
 
-          <button class="btn" type="submit">Request Quote</button>
-        </form>
+          <div class="card quote-output" aria-live="polite">
+            <p class="meta">Estimated price</p>
+            <p class="price" id="estimatePrice">$65</p>
+            <p class="meta" id="estimateNotes">Medium lawn, weekly service, premium edging.</p>
+            <button class="btn" type="button" id="estimateEmailBtn">Email This Estimate</button>
+            <p class="fineprint">This is a planning estimate. Exact pricing is confirmed after the property details are reviewed.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="availability" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Live Feature</p>
+          <h2>Check available service slots.</h2>
+        </div>
+        <div class="feature-grid">
+          <form class="card availability-tool" id="availabilityTool">
+            <label for="zip">ZIP code</label>
+            <input id="zip" name="zip" inputmode="numeric" maxlength="5" placeholder="78704" />
+            <label for="day">Preferred day</label>
+            <select id="day" name="day">
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+            <button type="submit" class="btn">Find Slots</button>
+          </form>
+
+          <div class="card slots" id="slotsResult" aria-live="polite">
+            <p class="meta">Next openings</p>
+            <ul>
+              <li>Enter ZIP + day to see your route options.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="proof" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Customer proof</p>
+          <h2>Local service should feel easy to trust.</h2>
+        </div>
+        <div class="proof-layout">
+          <article class="testimonial">
+            <p>“The edge work made the whole front yard look sharper. They showed up when they said they would and cleaned the driveway before leaving.”</p>
+            <span>South Austin homeowner</span>
+          </article>
+          <article class="testimonial">
+            <p>“We needed a one-time cleanup before listing photos. The yard went from rough to ready in one visit.”</p>
+            <span>Central Austin listing prep</span>
+          </article>
+          <article class="faq-panel">
+            <h3>Fast answers</h3>
+            <dl>
+              <dt>Do you handle overgrown lawns?</dt>
+              <dd>Yes. One-time resets are priced separately from weekly maintenance.</dd>
+              <dt>Do I need to be home?</dt>
+              <dd>No, as long as the crew has gate access and any pets are secured.</dd>
+              <dt>What happens after rain?</dt>
+              <dd>Service is moved to the next practical route window if the lawn is too wet to cut cleanly.</dd>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Get Started</p>
+          <h2>Request your exact quote.</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="card">
+            <p>Serving Austin-area neighborhoods with recurring routes, seasonal cleanups, and one-time resets.</p>
+            <p class="fineprint">If you prefer not to use the form, call or email us directly and we’ll reply with a route-based quote.</p>
+            <p class="capture-note">Lead capture is active for static hosting: the form can post to a configured endpoint or open a prefilled email fallback while the backend is being finalized.</p>
+            <ul class="contact-details">
+              <li><span>Phone</span><a href="tel:+15125551234">(512) 555-1234</a></li>
+              <li><span>Email</span><a href="mailto:hello@bpslawncare.com">hello@bpslawncare.com</a></li>
+              <li><span>Hours</span><span>Mon-Fri, 8am-6pm</span></li>
+            </ul>
+          </div>
+          <form class="card contact-form" id="contactForm" novalidate>
+            <label class="sr-only" for="fullName">Full name</label>
+            <input id="fullName" name="fullName" placeholder="Full name" required autocomplete="name" />
+            <label class="sr-only" for="emailAddress">Email address</label>
+            <input id="emailAddress" name="emailAddress" type="email" placeholder="Email address" required autocomplete="email" />
+            <label class="sr-only" for="serviceAddress">Service address</label>
+            <input id="serviceAddress" name="serviceAddress" placeholder="Service address" required autocomplete="street-address" />
+            <label class="sr-only" for="phoneNumber">Phone number</label>
+            <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Phone number" autocomplete="tel" />
+            <label class="sr-only" for="projectNotes">Project notes</label>
+            <textarea id="projectNotes" name="projectNotes" placeholder="Tell us what the property needs" rows="4"></textarea>
+            <label class="sr-only" for="companyWebsite">Company website</label>
+            <input id="companyWebsite" class="hp-field" name="companyWebsite" tabindex="-1" autocomplete="off" />
+            <button class="btn" type="submit">Request Quote</button>
+            <p class="form-status" id="contactStatus" aria-live="polite"></p>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> BP's Lawn Care</p>
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> BP's Lawn Care</p>
+        <p>(512) 555-1234</p>
+        <p>hello@bpslawncare.com</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
